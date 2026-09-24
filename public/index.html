@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VaultX — Identity-Bound Ephemeral Secret Vault & Zero-Trust Gateway</title>
+  <meta name="description" content="Enterprise Zero-Trust Ephemeral Secret Vault and File Security Gateway. Atomic one-time destruction, AES-256-GCM encryption, Scraper Shield, and Universal .vx Packaging.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+  <!-- Main Top Navigation -->
+  <header class="navbar" id="main-navbar">
+    <a href="/" class="nav-brand" onclick="event.preventDefault(); App.navigateTo('dashboard');">
+      <span>🛡️ VaultX</span>
+      <span class="brand-badge">Zero-Trust Enterprise</span>
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a class="nav-link active" data-tab="dashboard" onclick="App.navigateTo('dashboard')">Dashboard</a></li>
+        <li><a class="nav-link" data-tab="create" onclick="App.navigateTo('create')">+ Create Secret</a></li>
+        <li><a class="nav-link" data-tab="secrets" onclick="App.navigateTo('secrets')">Active Secrets</a></li>
+        <li><a class="nav-link" data-tab="packages" onclick="App.navigateTo('packages')">Universal .vx</a></li>
+        <li><a class="nav-link" data-tab="open" onclick="App.navigateTo('open')">Open Package</a></li>
+        <li><a class="nav-link" data-tab="files" onclick="App.navigateTo('files')">File Gateway</a></li>
+        <li><a class="nav-link" data-tab="whatif" onclick="App.navigateTo('whatif')">What-If Simulator</a></li>
+        <li><a class="nav-link" data-tab="lab" onclick="App.navigateTo('lab')">Security Lab</a></li>
+        <li><a class="nav-link" data-tab="incidents" onclick="App.navigateTo('incidents')">Threat & Incidents</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="btn-vault-lock" id="btn-global-vault-lock" onclick="App.toggleGlobalLock()">
+        🔒 Lock Vault
+      </button>
+    </div>
+  </header>
+
+  <!-- App Main Content Area -->
+  <main class="app-container" id="main-content">
+    <div style="text-align: center; padding: 4rem; color: var(--text-dim);">
+      Connecting to VaultX Cryptographic Engine...
+    </div>
+  </main>
+
+  <!-- Frontend Logic & Components -->
+  <script src="/js/utils/api.js"></script>
+  <script src="/js/components/dashboard.js"></script>
+  <script src="/js/components/createSecret.js"></script>
+  <script src="/js/components/activeSecrets.js"></script>
+  <script src="/js/components/receiverView.js"></script>
+  <script src="/js/components/universalDelivery.js"></script>
+  <script src="/js/components/openPackage.js"></script>
+  <script src="/js/components/fileGateway.js"></script>
+  <script src="/js/components/whatIfSimulator.js"></script>
+  <script src="/js/components/securityLab.js"></script>
+  <script src="/js/components/incidents.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
